@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/reona/claudecode/sales-letter/index.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界一分かりやすい自動化の教科書 | 4月2日一斉公開</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0f;--bg2:#12121a;--card:#16162a;
+  --a1:#6c63ff;--a2:#00d2ff;--a3:#ff6b6b;--a4:#ffd93d;--a5:#6bcb77;--a6:#c084fc;
+  --t1:#fff;--t2:#a0a0b8;--t3:#6b6b80;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--bg);color:var(--t1);overflow-x:hidden;line-height:1.8}
+body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+
+.orb{position:fixed;border-radius:50%;filter:blur(120px);opacity:.12;pointer-events:none;z-index:0}
+.orb-1{width:600px;height:600px;background:#6c63ff;top:-200px;right:-200px}
+.orb-2{width:500px;height:500px;background:#00d2ff;bottom:20%;left:-150px}
+.orb-3{width:400px;height:400px;background:#ff6b6b;top:50%;right:-100px}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 24px;position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(108,99,255,.12);border:1px solid rgba(108,99,255,.25);padding:8px 20px;border-radius:100px;font-size:14px;font-weight:500;color:var(--a2);margin-bottom:32px;animation:fadeUp .8s ease}
+.hero-badge .pulse{width:8px;height:8px;background:var(--a5);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.hero h1{font-size:clamp(36px,7vw,72px);font-weight:900;line-height:1.15;margin-bottom:16px;animation:fadeUp .8s ease .1s both}
+.hero h1 .gt{background:linear-gradient(135deg,#6c63ff,#00d2ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .sub{font-size:clamp(16px,2.5vw,22px);color:var(--t2);margin-bottom:40px;max-width:600px;animation:fadeUp .8s ease .2s both}
+.hero-date{display:inline-flex;align-items:center;gap:12px;background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.25);padding:16px 32px;border-radius:16px;font-size:20px;font-weight:700;color:var(--a3);animation:fadeUp .8s ease .3s both}
+.countdown{display:flex;gap:16px;margin-top:40px;animation:fadeUp .8s ease .4s both}
+.cd-item{display:flex;flex-direction:column;align-items:center;background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:16px 20px;min-width:80px}
+.cd-item .n{font-size:32px;font-weight:900;font-family:'Inter',sans-serif;background:linear-gradient(135deg,#6c63ff,#00d2ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cd-item .l{font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.scroll-ind{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTIONS */
+section{padding:100px 0;position:relative;z-index:1}
+.slbl{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--a2);margin-bottom:16px}
+.slbl::before{content:'';width:24px;height:2px;background:var(--a2)}
+.stitle{font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.3;margin-bottom:20px}
+.sdesc{font-size:17px;color:var(--t2);max-width:600px;margin-bottom:60px}
+
+/* FEATURE CARDS */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.fcard{background:var(--card);border:1px solid rgba(255,255,255,.05);border-radius:20px;padding:28px 28px 24px;transition:all .4s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;cursor:default}
+.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ca,linear-gradient(135deg,#6c63ff,#00d2ff));opacity:0;transition:opacity .4s;z-index:2}
+.fcard:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.1);box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.fcard:hover::before{opacity:1}
+.fcard h3{font-size:18px;font-weight:700;margin-bottom:8px;line-height:1.5}
+.fcard p{font-size:14px;color:var(--t2);line-height:1.7}
+.fcard .tag{display:inline-block;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:600;margin-top:14px}
+
+/* STATS */
+.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:60px 0}
+.stat{text-align:center}
+.stat .sn{font-size:48px;font-weight:900;font-family:'Inter',sans-serif;background:linear-gradient(135deg,#6c63ff,#00d2ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat .sl{font-size:14px;color:var(--t3);margin-top:8px}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);margin:20px 0}
+
+/* MORE */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.mcard{background:rgba(22,22,42,.6);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:24px;display:flex;gap:18px;align-items:flex-start;transition:all .3s}
+.mcard:hover{border-color:rgba(108,99,255,.25);background:rgba(22,22,42,.9);transform:translateY(-2px)}
+.mcard .iw{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mcard h4{font-size:15px;font-weight:700;margin-bottom:4px;line-height:1.5}
+.mcard p{font-size:13px;color:var(--t3);line-height:1.6}
+
+/* NARRATIVE */
+.narrative{text-align:center;padding:120px 24px}
+.narrative h2{font-size:clamp(24px,4vw,44px);font-weight:900;line-height:1.5;margin-bottom:32px}
+.narrative h2 .hl{position:relative;display:inline}
+.narrative h2 .hl::after{content:'';position:absolute;bottom:2px;left:0;right:0;height:8px;background:rgba(108,99,255,.25);border-radius:4px;z-index:-1}
+.narrative p{font-size:18px;color:var(--t2);max-width:700px;margin:0 auto 24px;line-height:2}
+.narrative .em{font-size:22px;font-weight:700;color:var(--t1);margin-top:40px}
+
+/* PROMISE */
+.promise{text-align:center;padding:100px 24px}
+.pbox{background:var(--card);border:1px solid rgba(108,99,255,.15);border-radius:24px;padding:60px 40px;max-width:800px;margin:0 auto;position:relative;overflow:hidden}
+.pbox::before{content:'';position:absolute;inset:-1px;background:linear-gradient(135deg,#6c63ff,#00d2ff);border-radius:25px;z-index:-1;opacity:.1}
+.pbox h2{font-size:clamp(22px,3.5vw,36px);font-weight:900;margin-bottom:24px;line-height:1.5}
+.pbox p{font-size:17px;color:var(--t2);line-height:2;margin-bottom:16px}
+.pbox .sig{margin-top:32px;font-size:15px;color:var(--t3)}
+
+/* CTA */
+.cta{text-align:center;padding:100px 24px 140px}
+.cta h2{font-size:clamp(28px,5vw,52px);font-weight:900;margin-bottom:16px;line-height:1.3}
+.cta h2 .gt{background:linear-gradient(135deg,#ff6b6b,#ffd93d);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cta p{font-size:18px;color:var(--t2);margin-bottom:40px}
+.cta-btn{display:inline-flex;align-items:center;gap:12px;padding:20px 48px;background:linear-gradient(135deg,#6c63ff,#00d2ff);border:none;border-radius:100px;color:#fff;font-size:18px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 8px 32px rgba(108,99,255,.4)}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(108,99,255,.6)}
+
+.rv{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.particle{position:absolute;width:2px;height:2px;background:rgba(108,99,255,.5);border-radius:50%;animation:float linear infinite}
+@keyframes float{0%{transform:translateY(100vh);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh);opacity:0}}
+
+@media(max-width:768px){
+  .fgrid{grid-template-columns:1fr}.mgrid{grid-template-columns:1fr}.stats{gap:24px}
+  .countdown{gap:8px}.cd-item{min-width:64px;padding:12px 14px}.cd-item .n{font-size:24px}
+  section{padding:60px 0}.hero{padding:60px 16px}.pbox{padding:40px 24px}
+}
+</style>
+</head>
+<body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+<div class="particles" id="particles"><div class="particle" style="left: 72.4833%; animation-duration: 22.6539s; animation-delay: 9.25406s; width: 2.43009px; height: 2.43009px;"></div><div class="particle" style="left: 73.971%; animation-duration: 15.0493s; animation-delay: 7.21147s; width: 2.72099px; height: 2.72099px;"></div><div class="particle" style="left: 74.4424%; animation-duration: 13.7182s; animation-delay: 7.60671s; width: 1.15832px; height: 1.15832px;"></div><div class="particle" style="left: 70.5008%; animation-duration: 12.2249s; animation-delay: 8.36787s; width: 1.19518px; height: 1.19518px;"></div><div class="particle" style="left: 12.7549%; animation-duration: 15.4084s; animation-delay: 3.8578s; width: 3.6626px; height: 3.6626px;"></div><div class="particle" style="left: 81.8427%; animation-duration: 13.6168s; animation-delay: 1.67707s; width: 1.07874px; height: 1.07874px;"></div><div class="particle" style="left: 39.5866%; animation-duration: 10.4708s; animation-delay: 3.89432s; width: 1.59718px; height: 1.59718px;"></div><div class="particle" style="left: 73.4356%; animation-duration: 14.6155s; animation-delay: 8.2112s; width: 1.48941px; height: 1.48941px;"></div><div class="particle" style="left: 26.2975%; animation-duration: 22.9958s; animation-delay: 6.29369s; width: 2.94645px; height: 2.94645px;"></div><div class="particle" style="left: 69.0133%; animation-duration: 17.8416s; animation-delay: 8.04597s; width: 1.2102px; height: 1.2102px;"></div><div class="particle" style="left: 6.42052%; animation-duration: 23.9106s; animation-delay: 7.61788s; width: 3.89461px; height: 3.89461px;"></div><div class="particle" style="left: 48.4198%; animation-duration: 15.4666s; animation-delay: 0.850565s; width: 1.58865px; height: 1.58865px;"></div><div class="particle" style="left: 72.671%; animation-duration: 18.1731s; animation-delay: 1.68172s; width: 3.31237px; height: 3.31237px;"></div><div class="particle" style="left: 90.1896%; animation-duration: 20.488s; animation-delay: 8.98855s; width: 1.36035px; height: 1.36035px;"></div><div class="particle" style="left: 27.7241%; animation-duration: 14.8137s; animation-delay: 3.86856s; width: 3.05118px; height: 3.05118px;"></div><div class="particle" style="left: 53.4562%; animation-duration: 13.5983s; animation-delay: 0.143212s; width: 3.48439px; height: 3.48439px;"></div><div class="particle" style="left: 9.94797%; animation-duration: 10.6455s; animation-delay: 2.88254s; width: 2.8105px; height: 2.8105px;"></div><div class="particle" style="left: 72.7757%; animation-duration: 12.2223s; animation-delay: 1.52761s; width: 3.86248px; height: 3.86248px;"></div><div class="particle" style="left: 91.3281%; animation-duration: 12.1775s; animation-delay: 7.88586s; width: 1.8298px; height: 1.8298px;"></div><div class="particle" style="left: 21.8743%; animation-duration: 19.1442s; animation-delay: 1.62467s; width: 3.36543px; height: 3.36543px;"></div><div class="particle" style="left: 36.1217%; animation-duration: 12.3833s; animation-delay: 1.11478s; width: 3.66967px; height: 3.66967px;"></div><div class="particle" style="left: 9.32268%; animation-duration: 19.2355s; animation-delay: 9.16314s; width: 1.65779px; height: 1.65779px;"></div><div class="particle" style="left: 42.7164%; animation-duration: 15.1455s; animation-delay: 6.4815s; width: 1.92029px; height: 1.92029px;"></div><div class="particle" style="left: 41.1057%; animation-duration: 23.3274s; animation-delay: 6.36131s; width: 1.80473px; height: 1.80473px;"></div><div class="particle" style="left: 58.5594%; animation-duration: 13.5623s; animation-delay: 0.638047s; width: 3.75738px; height: 3.75738px;"></div><div class="particle" style="left: 63.2128%; animation-duration: 19.9511s; animation-delay: 6.54407s; width: 1.08332px; height: 1.08332px;"></div><div class="particle" style="left: 73.8713%; animation-duration: 15.7062s; animation-delay: 4.46217s; width: 3.86629px; height: 3.86629px;"></div><div class="particle" style="left: 20.9453%; animation-duration: 18.6786s; animation-delay: 2.87346s; width: 3.28881px; height: 3.28881px;"></div><div class="particle" style="left: 93.9884%; animation-duration: 24.5543s; animation-delay: 9.96226s; width: 1.51286px; height: 1.51286px;"></div><div class="particle" style="left: 90.6545%; animation-duration: 12.9136s; animation-delay: 1.68324s; width: 2.04174px; height: 2.04174px;"></div></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge"><span class="pulse"></span>ついにリリース</div>
+  <h1>世界一分かりやすい<br><span class="gt">自動化の教科書</span></h1>
+  <p class="sub">自動化コンテンツ販売のすべてを教えます。<br>寝ている間に、すべてが動き出す。</p>
+  <div class="hero-date">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    4月2日（水）夜 — 一斉公開
+  </div>
+  <div class="countdown" id="countdown">
+    <div class="cd-item"><span class="n" id="cd-d">01</span><span class="l">Days</span></div>
+    <div class="cd-item"><span class="n" id="cd-h">21</span><span class="l">Hours</span></div>
+    <div class="cd-item"><span class="n" id="cd-m">30</span><span class="l">Mins</span></div>
+    <div class="cd-item"><span class="n" id="cd-s">26</span><span class="l">Secs</span></div>
+  </div>
+  <div class="scroll-ind"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"></path></svg></div>
+</header>
+
+<!-- STATS -->
+<div class="container">
+  <div class="stats rv">
+    <div class="stat"><div class="sn">60万+</div><div class="sl">累計フォロワー</div></div>
+    <div class="stat"><div class="sn">8桁</div><div class="sl">月収達成</div></div>
+    <div class="stat"><div class="sn">1人</div><div class="sl">完全ソロ運営</div></div>
+    <div class="stat"><div class="sn">100+</div><div class="sl">スキルテンプレ</div></div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- MAIN FEATURES -->
+<section class="container">
+  <div class="rv">
+    <span class="slbl">Core Contents</span>
+    <h2 class="stitle">すべてを自動化する<br>完全ロードマップ</h2>
+    <p class="sdesc">AIと自動化ツールを駆使して、コンテンツ作成から販売まで、すべてのプロセスを自動化する方法を公開します。</p>
+  </div>
+
+  <div class="fgrid">
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#6c63ff,#00d2ff)">
+      <h3>SNS投稿自動作成</h3>
+      <p>AIがあなたの代わりに投稿を自動生成。スレッズ・インスタ・X、すべてのSNSに対応。</p>
+      <span class="tag" style="background:rgba(108,99,255,.12);color:#6c63ff">SNS自動化</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#ff6b6b,#ffd93d)">
+      <h3>寝ている間にすべての有料商品を作る流れ</h3>
+      <p>就寝前にセットするだけ。起きたら商品が完成している、夢のような自動化フロー。</p>
+      <span class="tag" style="background:rgba(255,107,107,.12);color:#ff6b6b">商品作成</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#6bcb77,#00d2ff)">
+      <h3>プロレベルのショート動画をワンタップで作成</h3>
+      <p>編集スキル不要。タップ一つでプロ品質のショート動画が完成します。</p>
+      <span class="tag" style="background:rgba(107,203,119,.12);color:#6bcb77">動画制作</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#ffd93d,#ff6b6b)">
+      <h3>自動化を使って商品を2倍の単価で売る方法</h3>
+      <p>付加価値を最大化する自動化戦略で、同じ労力で収益を倍増させます。</p>
+      <span class="tag" style="background:rgba(255,217,61,.12);color:#ffd93d">収益UP</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#c084fc,#6c63ff)">
+      <h3>Claude全自動化 完全コンプリート</h3>
+      <p>Claude Codeの全機能を使いこなし、あらゆるタスクを完全自動化する究極ガイド。</p>
+      <span class="tag" style="background:rgba(192,132,252,.12);color:#c084fc">Claude</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#00d2ff,#6bcb77)">
+      <h3>Manus自動化 完全コンプリート</h3>
+      <p>AIエージェントManusを最大限活用し、複雑なタスクも完全自動で処理。</p>
+      <span class="tag" style="background:rgba(0,210,255,.12);color:#00d2ff">Manus</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#ff6b6b,#c084fc)">
+      <h3>PCを遠隔操作して記事を完成させる裏ワザ</h3>
+      <p>外出先からでもPCを遠隔操作。記事作成も自動で完了する秘密の方法。</p>
+      <span class="tag" style="background:rgba(255,107,107,.12);color:#ff6b6b">遠隔操作</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#6c63ff,#c084fc)">
+      <h3>コンテンツ爆速量産で売れ続ける仕組み</h3>
+      <p>高品質コンテンツを圧倒的スピードで量産し、継続的な収益を実現。</p>
+      <span class="tag" style="background:rgba(108,99,255,.12);color:#6c63ff">量産</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#ffd93d,#6bcb77)">
+      <h3>レオが実際にやってる月30万を実現するオートアフィリエイト成約術</h3>
+      <p>実際に成果を出している具体的な手法を、包み隠さずすべて公開。</p>
+      <span class="tag" style="background:rgba(255,217,61,.12);color:#ffd93d">アフィリ</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#6bcb77,#6c63ff)">
+      <h3>ClaudeCodeでアプリ作成〜公開設定 一発丸わかりステップ</h3>
+      <p>コードが書けなくてもOK。アプリのアイデアから公開まで完全ガイド。</p>
+      <span class="tag" style="background:rgba(107,203,119,.12);color:#6bcb77">アプリ開発</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#00d2ff,#c084fc)">
+      <h3>PCの画面を一度も変えずに集客と教育とセールスを終わらせる方法</h3>
+      <p>1画面で完結。ファネルのすべてを一つの画面で完了させる驚きの手法。</p>
+      <span class="tag" style="background:rgba(0,210,255,.12);color:#00d2ff">ファネル</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#ff6b6b,#ffd93d)">
+      <h3>なぜか誰も使ってない意外なツールの組み合わせ方と活用法</h3>
+      <p>知る人ぞ知るツール同士の化学反応。あなたの効率を爆上げする秘密の組み合わせ。</p>
+      <span class="tag" style="background:rgba(255,107,107,.12);color:#ff6b6b">秘密のワザ</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#6c63ff,#00d2ff)">
+      <h3>累計約60万フォロワーを増やしたスレッズトップマーケターの完全アルゴリズム攻略</h3>
+      <p>スレッズで累計60万フォロワーを達成した、再現性のあるアルゴリズム攻略法。</p>
+      <span class="tag" style="background:rgba(108,99,255,.12);color:#6c63ff">スレッズ攻略</span>
+    </div>
+
+    <div class="fcard rv" style="--ca:linear-gradient(135deg,#c084fc,#ff6b6b)">
+      <h3>コピペで使えるビジネス用のスキル100個テンプレ</h3>
+      <p>即戦力のスキルテンプレート100個。コピペするだけで即座にビジネスに活用。</p>
+      <span class="tag" style="background:rgba(192,132,252,.12);color:#c084fc">テンプレ</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MORE -->
+<section class="container">
+  <div class="rv">
+    <span class="slbl">And More</span>
+    <h2 class="stitle">まだまだあります</h2>
+    <p class="sdesc">教材に含まれるすべての内容を一部ご紹介。</p>
+  </div>
+  <div class="mgrid">
+    <div class="mcard rv">
+      <div class="iw" style="background:rgba(0,210,255,.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+      <div><h4>問い合わせ・顧客対応の裏ワザ完全公開</h4><p>誰も解説してない顧客対応自動化の秘密</p></div>
+    </div>
+    <div class="mcard rv">
+      <div class="iw" style="background:rgba(255,217,61,.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffd93d" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></div>
+      <div><h4>2026年トレンドの稼ぎ方</h4><p>シンプルなのに月6桁以上稼げる新しいコンテンツ販売</p></div>
+    </div>
+    <div class="mcard rv">
+      <div class="iw" style="background:rgba(192,132,252,.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></div>
+      <div><h4>Claudeの自動化機能ミックス活用術</h4><p>なにもかもお任せする事例と活用術</p></div>
+    </div>
+    <div class="mcard rv">
+      <div class="iw" style="background:rgba(255,107,107,.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+      <div><h4>インスタ投稿と集客を自動化する流れ</h4><p>Instagram運用を完全自動化</p></div>
+    </div>
+    <div class="mcard rv">
+      <div class="iw" style="background:rgba(107,203,119,.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6bcb77" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+      <div><h4>AIツールが分からない時に一発で理解する方法</h4><p>初心者でも迷わないAIツール活用法</p></div>
+    </div>
+    <div class="mcard rv">
+      <div class="iw" style="background:rgba(108,99,255,.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+      <div><h4>AIツールお役立ちガイドブック&amp;マニュアル</h4><p>その他のAIツール活用完全ガイド</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- NARRATIVE -->
+<section class="narrative rv">
+  <div class="container">
+    <h2>初心者でも<span class="hl">使いこなせる</span>内容です</h2>
+    <p>難しい解説はしません。<br>よくわからないコードの説明もしません。</p>
+    <p>この教材1つあれば、<br>今の時代に乗り遅れることもありません。</p>
+    <p class="em">あの、AI大全をリリースしてベストセラーになり、<br>口コミが大量にあふれたあのときの興奮を<br>もう一度届けます。</p>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise">
+  <div class="container">
+    <div class="pbox rv">
+      <h2>組織も仲間も不要。<br>たった1人で、月収8桁を超える。</h2>
+      <p>どれだけ忙しくても、どれだけ時間がなくても、<br>上記のような自動化ができれば、<br>僕のように一人で月収8桁を超えられます。</p>
+      <p>その証拠に、僕は1人ですべてを動かしてきました。<br>だから、スレッズで誰よりも説得力があります。</p>
+      <div class="sig">— レオ</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2><span class="gt">4月2日の夜</span><br>楽しみにしててください。</h2>
+  <p>一斉公開まで、あと少し。</p>
+  <a href="file:///C:/Users/reona/claudecode/sales-letter/index.html#" class="cta-btn">公開を楽しみに待つ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+</section>
+
+<footer style="text-align:center;padding:40px 24px;border-top:1px solid rgba(255,255,255,.04)">
+  <p style="color:var(--t3);font-size:13px">© 2026 レオ — 世界一分かりやすい自動化の教科書</p>
+</footer>
+
+<script>
+function uc(){
+  const t=new Date('2026-04-02T21:00:00+09:00'),n=new Date(),d=t-n;
+  if(d<=0){['cd-d','cd-h','cd-m','cd-s'].forEach(i=>document.getElementById(i).textContent='00');return}
+  document.getElementById('cd-d').textContent=String(Math.floor(d/864e5)).padStart(2,'0');
+  document.getElementById('cd-h').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');
+  document.getElementById('cd-s').textContent=String(Math.floor(d%6e4/1e3)).padStart(2,'0');
+}
+uc();setInterval(uc,1000);
+const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.rv').forEach(e=>ob.observe(e));
+const pc=document.getElementById('particles');
+for(let i=0;i<30;i++){const p=document.createElement('div');p.className='particle';p.style.left=Math.random()*100+'%';p.style.animationDuration=(Math.random()*15+10)+'s';p.style.animationDelay=(Math.random()*10)+'s';const s=(Math.random()*3+1)+'px';p.style.width=s;p.style.height=s;pc.appendChild(p)}
+</script>
+
+
+</body></html>
